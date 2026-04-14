@@ -1,10 +1,8 @@
 FROM tomcat:9.0
 
-# remove default apps
 RUN rm -rf /usr/local/tomcat/webapps/*
 
-# copy your web app
-COPY src/main/webapp/ /usr/local/tomcat/webapps/ROOT/
+COPY GroceryWebApp.war /usr/local/tomcat/webapps/ROOT.war
 
 EXPOSE 8080
 
